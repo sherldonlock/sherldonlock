@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nicechat.dao.ImageDao">
+
+    <insert id="addImage" parameterType="com.nicechat.pojo.Image">
+        insert into image(id, image_url) values (#{id}, #{imageUrl})
+    </insert>
+
+    <select id="getImageByImageIds" parameterType="list" resultType="com.nicechat.pojo.Image">
+        select
+            i.id,
+            i.image_url as imageUrl
+        from
+            image i
+        where
+            <foreach collection="imageIds" item="iid" open="i.id in(" close=")" separator=",">
+                #{iid}
+            </foreach>
+    </select>
+
+    <delete id="deleteImageByImageIds" parameterType="list">
+        delete
+        from
+            image
+        where
+            <foreach collection="imageIds" item="iid" open="id in(" close=")" separator=",">
+                #{iid}
+            </foreach>
+    </delete>
+
+</mapper>

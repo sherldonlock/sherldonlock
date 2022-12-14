@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nicechat.dao.UserDao">
+
+    <select id="getUserByAccountNum" parameterType="String" resultType="com.nicechat.pojo.User">
+        select
+            u1.id as id,
+            u1.account_num as accountNum,
+            u1.password as password,
+            u1.username as userName,
+            u1.avatar_url as avatarUrl,
+            u1.sex as sex,
+            u1.emotion as emotion,
+            u1.birthday as birthday,
+            u1.introduction as introduction,
+            u1.create_date as createDate
+        from
+            user u1
+        where
+            u1.account_num = #{accountNum}
+    </select>
+
+    <select id="getUserNameList" resultType="com.nicechat.pojo.User">
+        select
+            username as userName
+        from
+            user
+    </select>
+
+    <select id="getRecommendUsers" parameterType="java.lang.String" resultType="com.nicechat.pojo.User">
+        select
+            id,
+            username as userName,
+            avatar_url as avatarUrl
+        from
+            user u,
+            user_university uu
+        where
+            u.id = uu.user_id
+            and uu.user_id != #{loginUserId}
+	        and uu.university_code = #{schoolCode}
+        order by
+            rand()
+        limit 5;
+    </select>
+
+    <select id="getDynamicCountByUserId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            count(*) as dynamicCount
+        from
+            user_dynamic ud
+        where
+            ud.user_id = #{userId}
+    </select>
+
+    <select id="getFocusCountByUserId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            count(*) as focusCount
+        from
+            fans f
+        where
+            f.slave_id = #{userId}
+    </select>
+
+    <select id="getFansCountByUserId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            count(*) as fansCount
+        from
+            fans f
+        where
+            f.master_id = #{userId}
+    </select>
+
+    <select id="getUserInfoByUserId" parameterType="java.lang.String" resultType="com.nicechat.pojo.User">
+        select
+            u.id,
+            u.username as userName,
+            u.avatar_url as avatarUrl,
+            u.sex,
+            u.emotion,
+            u.birthday,
+            u.introduction,
+            u.create_date as createDate,
+            un.schoolName
+        from
+            user u,
+            user_university uu,
+            university un
+        where
+            u.id = uu.user_id
+            and uu.university_code = un.code
+            and u.id = #{userId}
+    </select>
+
+    <resultMap id="getDynamicListMap" type="com.nicechat.pojo.Dynamic">
+        <result property="id" column="dynamic_id"></result>
+        <result property="avatarUrl" column="avatar_url"></result>
+        <result property="userId" column="user_id"></result>
+        <result property="userName" column="username"></result>
+        <result property="postTime" column="create_time"></result>
+        <result property="schoolName" column="schoolName"></result>
+        <result property="content" column="content"></result>
+        <result property="collectCount" column="collectCount"></result>
+        <result property="commentCount" column="commentCount"></result>
+        <result property="likeCount" column="likeCount"></result>
+        <collection property="imgList" ofType="com.nicechat.pojo.Image">
+            <result property="id" column="image_id"></result>
+            <result property="imageUrl" column="image_url"></result>
+        </collection>
+        <collection property="tagList" ofType="com.nicechat.pojo.Topic">
+            <result property="topicName" column="name"></result>
+        </collection>
+    </resultMap>
+
+    <select id="getDynamicListByUserId" parameterType="java.lang.String" resultMap="getDynamicListMap">
+        select
+            *,
+            (select count(*) from collect c where c.dynamic_id = d.dynamic_id) as collectCount,
+            (select count(*) from dynamic_comment dc where dc.dynamic_id = d.dynamic_id) as commentCount,
+            (select count(*) from `like` l where l.dynamic_id = d.dynamic_id) as likeCount
+        from
+            dynamic d
+            left join dynamic_image di on d.dynamic_id = di.dynamic_id
+            left join image i on di.image_id = i.id
+            left join dynamic_topic dt on d.dynamic_id = dt.dynamic_id
+            left join topic t on dt.topic_id = t.id
+            join user_dynamic ud on d.dynamic_id = ud.dynamic_id
+            join user u on ud.user_id = u.id
+            join user_university uu on u.id = uu.user_id
+            join university un on uu.university_code = un.code
+        where
+            ud.user_id = #{userId}
+        order by
+            d.create_time desc
+    </select>
+
+    <select id="getFocusListByUserId" parameterType="java.lang.String" resultType="com.nicechat.pojo.User">
+        select
+            u.id,
+            u.username as userName,
+            u.avatar_url as avatarUrl,
+            un.schoolName,
+            (select count(*) from user_dynamic ud where ud.user_id = u.id) as dynamicCount,
+            (select count(*) from fans f where f.master_id = u.id) as fansCount
+        from
+            fans f,
+            user u,
+            user_university uu,
+            university un
+        where
+            f.master_id = u.id
+            and u.id = uu.user_id
+            and uu.university_code = un.code
+            and f.slave_id = #{userId}
+        order by
+            f.create_time desc
+    </select>
+
+    <select id="getFansListByUserId" parameterType="java.lang.String" resultType="com.nicechat.pojo.User">
+        select
+            u.id,
+            u.username as userName,
+            u.avatar_url as avatarUrl,
+            un.schoolName,
+            (select count(*) from user_dynamic ud where ud.user_id = u.id) as dynamicCount,
+            (select count(*) from fans f where f.master_id = u.id) as fansCount
+        from
+            fans f,
+            user u,
+            user_university uu,
+            university un
+        where
+            f.slave_id = u.id
+            and u.id = uu.user_id
+            and uu.university_code = un.code
+            and f.master_id = #{userId}
+        order by
+            f.create_time desc
+    </select>
+
+    <select id="getMyLikeList" parameterType="java.lang.String" resultMap="getDynamicListMap">
+        select
+            *,
+            (select count(*) from collect c where c.dynamic_id = d.dynamic_id) as collectCount,
+            (select count(*) from dynamic_comment dc where dc.dynamic_id = d.dynamic_id) as commentCount,
+            (select count(*) from `like` l where l.dynamic_id = d.dynamic_id) as likeCount
+        from
+            `like` l
+            left join dynamic d on l.dynamic_id = d.dynamic_id
+            left join dynamic_image di on d.dynamic_id = di.dynamic_id
+            left join image i on di.image_id = i.id
+            left join dynamic_topic dt on d.dynamic_id = dt.dynamic_id
+            left join topic t on dt.topic_id = t.id
+            join user_dynamic ud on d.dynamic_id = ud.dynamic_id
+            join user u on ud.user_id = u.id
+            join user_university uu on u.id = uu.user_id
+            join university un on uu.university_code = un.code
+        where
+            l.liker_id = #{userId}
+        order by
+            l.create_time desc
+    </select>
+
+    <select id="getMyCollectList" parameterType="java.lang.String" resultMap="getDynamicListMap">
+        select
+            *,
+            (select count(*) from collect c where c.dynamic_id = d.dynamic_id) as collectCount,
+            (select count(*) from dynamic_comment dc where dc.dynamic_id = d.dynamic_id) as commentCount,
+            (select count(*) from `like` l where l.dynamic_id = d.dynamic_id) as likeCount
+        from
+            collect c
+            left join dynamic d on c.dynamic_id = d.dynamic_id
+            left join dynamic_image di on d.dynamic_id = di.dynamic_id
+            left join image i on di.image_id = i.id
+            left join dynamic_topic dt on d.dynamic_id = dt.dynamic_id
+            left join topic t on dt.topic_id = t.id
+            join user_dynamic ud on d.dynamic_id = ud.dynamic_id
+            join user u on ud.user_id = u.id
+            join user_university uu on u.id = uu.user_id
+            join university un on uu.university_code = un.code
+        where
+            c.collector_id = #{userId}
+        order by
+            c.create_time desc
+    </select>
+
+    <update id="updateAvatarUrl" parameterType="java.lang.String">
+        update user set avatar_url = #{avatarUrl} where id = #{userId}
+    </update>
+
+    <update id="updateUserInfo" parameterType="com.nicechat.pojo.User">
+        update
+            user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userName != null">username = #{userName},</if>
+            <if test="sex != null">sex = #{sex},</if>
+            <if test="emotion != null">emotion = #{emotion},</if>
+            <if test="birthday != null">birthday = #{birthday},</if>
+            <if test="introduction != null">introduction = #{introduction}</if>
+        </trim>
+        where
+            id = #{id}
+    </update>
+
+    <select id="getAvatarUrlByUserId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            avatar_url
+        from
+            user
+        where
+            id = #{userId}
+    </select>
+
+</mapper>

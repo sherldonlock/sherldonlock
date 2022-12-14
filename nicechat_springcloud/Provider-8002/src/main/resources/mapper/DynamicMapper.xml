@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nicechat.dao.DynamicDao">
+
+<!--    <cache eviction="LRU" flushInterval="100000" size="1024"/>-->
+
+    <insert id="addDynamic" parameterType="com.nicechat.pojo.Dynamic">
+        insert into dynamic(dynamic_id, content, create_time) values (#{id}, #{content}, #{postTime})
+    </insert>
+
+    <insert id="addDynamicImages" parameterType="String">
+        insert into dynamic_image(dynamic_id, image_id) values (#{dynamicId}, #{imageId})
+    </insert>
+
+    <insert id="addDynamicTopic" parameterType="String">
+        insert into dynamic_topic(dynamic_id, topic_id) values (#{dynamicId}, #{topicId})
+    </insert>
+
+    <insert id="addUserDynamic" parameterType="String">
+        insert into user_dynamic(user_id, dynamic_id) values (#{userId}, #{dynamicId})
+    </insert>
+
+    <resultMap id="getDynamicListMap" type="com.nicechat.pojo.Dynamic">
+        <result property="id" column="dynamic_id"></result>
+        <result property="avatarUrl" column="avatar_url"></result>
+        <result property="userId" column="user_id"></result>
+        <result property="userName" column="username"></result>
+        <result property="postTime" column="create_time"></result>
+        <result property="schoolName" column="schoolName"></result>
+        <result property="content" column="content"></result>
+        <result property="collectCount" column="collectCount"></result>
+        <result property="commentCount" column="commentCount"></result>
+        <result property="likeCount" column="likeCount"></result>
+        <collection property="imgList" ofType="com.nicechat.pojo.Image">
+            <result property="id" column="image_id"></result>
+            <result property="imageUrl" column="image_url"></result>
+        </collection>
+        <collection property="tagList" ofType="com.nicechat.pojo.Topic">
+            <result property="topicName" column="name"></result>
+        </collection>
+    </resultMap>
+
+    <select id="getDynamicList" resultMap="getDynamicListMap">
+        select
+            *,
+            (select count(*) from collect c where c.dynamic_id = d.dynamic_id) as collectCount,
+            (select count(*) from dynamic_comment dc where dc.dynamic_id = d.dynamic_id) as commentCount,
+            (select count(*) from `like` l where l.dynamic_id = d.dynamic_id) as likeCount
+        from
+            dynamic d
+            left join dynamic_image di on d.dynamic_id = di.dynamic_id
+            left join image i on di.image_id = i.id
+            left join dynamic_topic dt on d.dynamic_id = dt.dynamic_id
+            left join topic t on dt.topic_id = t.id
+            join user_dynamic ud on d.dynamic_id = ud.dynamic_id
+            join user u on ud.user_id = u.id
+            join user_university uu on u.id = uu.user_id
+            join university un on uu.university_code = un.code
+        <where>
+            <if test='schoolName != "" and schoolName != null'>
+                and un.schoolName = #{schoolName}
+            </if>
+            <if test='topicName != "" and topicName != null'>
+                and t.name LIKE CONCAT('%',#{topicName},'%')
+            </if>
+            <if test='userName != "" and userName != null'>
+                and u.username = #{userName}
+            </if>
+            <if test="focusUserIds != null">
+                <foreach collection="focusUserIds" item="fuid" open="and u.id in(" close=")" separator=",">
+                    #{fuid}
+                </foreach>
+            </if>
+        </where>
+        order by
+            d.create_time desc
+    </select>
+
+    <insert id="addCollect" parameterType="java.lang.String">
+        insert into collect(collector_id, dynamic_id, create_time) values (#{loginUserId}, #{dynamicId}, #{createTime})
+    </insert>
+
+    <delete id="deleteCollect" parameterType="java.lang.String">
+        delete from collect where collector_id = #{loginUserId} and dynamic_id = #{dynamicId}
+    </delete>
+
+    <insert id="addLike" parameterType="java.lang.String">
+        insert into `like`(liker_id, dynamic_id, create_time) values (#{loginUserId}, #{dynamicId}, #{createTime})
+    </insert>
+
+    <delete id="deleteLike" parameterType="java.lang.String">
+        delete from `like` where liker_id = #{loginUserId} and dynamic_id = #{dynamicId}
+    </delete>
+
+    <select id="getCollectListByUserId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            dynamic_id
+        from
+            collect
+        where
+            collector_id = #{userId}
+    </select>
+
+    <select id="getLikeListByUserId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            dynamic_id
+        from
+            `like`
+        where
+            liker_id = #{userId}
+    </select>
+
+    <delete id="deleteUserDynamicCommentCollectLikeByDynamicId" parameterType="java.lang.String">
+        delete
+            ud,
+            cl,
+            l,
+            dc,
+            c,
+            uc
+        from
+            user_dynamic ud
+            left join collect cl on ud.dynamic_id = cl.dynamic_id
+            left join `like` l on ud.dynamic_id = l.dynamic_id
+            left join dynamic_comment dc on ud.dynamic_id = dc.dynamic_id
+            left join `comment` c on dc.comment_id = c.id
+            left join user_comment uc on c.id = uc.comment_id
+        where
+            ud.dynamic_id = #{dynamicId}
+    </delete>
+
+    <select id="getImageIdsByDynamicId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            di.image_id
+        from
+            dynamic_image di
+        where
+            di.dynamic_id = #{dynamicId}
+    </select>
+
+    <delete id="deleteDynamicImageByDynamicId" parameterType="java.lang.String">
+        delete from dynamic_image where dynamic_id = #{dynamicId}
+    </delete>
+
+    <select id="getTopicIdsByDynamicId" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+            dt.topic_id
+        from
+            dynamic_topic dt
+        where
+            dt.dynamic_id = #{dynamicId}
+    </select>
+
+    <delete id="deleteDynamicTopicByDynamicIdAndTopicId" parameterType="java.lang.String">
+        delete from dynamic_topic where dynamic_id = #{dynamicId} and topic_id = #{topicId}
+    </delete>
+
+    <select id="countDynamicTopicByTopicId" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+            dynamic_topic dt
+        where
+            dt.topic_id = #{topicId}
+    </select>
+
+    <delete id="deleteDynamicByDynamicId" parameterType="java.lang.String">
+        delete from dynamic where dynamic_id = #{dynamicId}
+    </delete>
+
+</mapper>

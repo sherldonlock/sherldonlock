@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nicechat.dao.TopicDao">
+
+    <insert id="addTopic" parameterType="com.nicechat.pojo.Topic">
+        insert into topic(id, name) values (#{id}, #{topicName})
+    </insert>
+
+    <select id="getTopicIdByTopicName" resultType="java.lang.String" parameterType="java.lang.String">
+        select
+            id
+        from
+            topic
+        where
+            name = #{topicName}
+    </select>
+
+    <select id="getTopicList" resultType="com.nicechat.pojo.Topic">
+        select
+            id,
+            name as topicName
+        from
+            topic
+    </select>
+
+    <select id="getHotTopicsTopTen" resultType="com.nicechat.pojo.Topic">
+        select
+            t.id,
+            t.name as topicName,
+            count(*) as count
+        from
+	        dynamic_topic dt,
+	        topic t
+        where
+	        dt.topic_id = t.id
+        group by
+	        t.name
+        order by
+	        count desc
+	    limit 10
+    </select>
+
+    <delete id="deleteTopicByTopicId" parameterType="java.lang.String">
+        delete from topic where id = #{topicId}
+    </delete>
+
+</mapper>

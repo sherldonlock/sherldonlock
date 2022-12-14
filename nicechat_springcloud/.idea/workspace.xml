@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60906ecf-0da7-4d96-a713-a9edafa4852a" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nicechat" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nicechat" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nicechat" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="nicechat: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26EyhMNba4Y0leR2aaz4ePMQRgI" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Provider-8001/src/main/java/com/nicechat/config" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.27816093" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\nicechat_springcloud\Provider-8001\src\main\resources" />
+      <recent name="F:\nicechat_springcloud\Provider-8001\src\main\resources\config" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.nicechat" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nicechat.config" />
+      <recent name="com.nicechat.pojo" />
+      <recent name="com.nicechat.dao" />
+      <recent name="com.nicechat.service" />
+      <recent name="com.nicechat.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\nicechat_springcloud\Provider-8001\src\main\java\com\nicechat\config" />
+      <recent name="F:\nicechat_springcloud\Provider-8001\src\main\java\com\nicechat" />
+      <recent name="F:\nicechat_springcloud" />
+      <recent name="F:\nicechat_springcloud\ChatSystem-6001\src\main\resources\mapper" />
+      <recent name="F:\nicechat_springcloud\ChatSystem-10001\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ChatSystem_6001">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="Provider-chat-8002" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="Provider-chat-8002" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatSystem_6001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ChatSystem-6001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nicechat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nicechat.ChatSystem_6001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Consumer_9001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Consumer-9001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nicechat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nicechat.Consumer_9001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Consumer_9002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Consumer-9002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nicechat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nicechat.Consumer_9002" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Provider_8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Provider-8001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nicechat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nicechat.Provider_8001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Provider_8002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Provider-8002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nicechat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nicechat.Provider_8002" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.17" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Default_(Template)_Project" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59754" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52157" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Consumer_9002" />
+      <item itemvalue="Spring Boot.Provider_8001" />
+      <item itemvalue="Spring Boot.Provider_8002" />
+      <item itemvalue="Spring Boot.Consumer_9001" />
+      <item itemvalue="Spring Boot.ChatSystem_6001" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Consumer_9001" />
+        <item itemvalue="Spring Boot.Consumer_9002" />
+        <item itemvalue="Spring Boot.Provider_8002" />
+        <item itemvalue="Spring Boot.Provider_8001" />
+        <item itemvalue="Spring Boot.ChatSystem_6001" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60906ecf-0da7-4d96-a713-a9edafa4852a" name="默认更改列表" comment="" />
+      <created>1647003157385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647003157385</updated>
+      <workItem from="1647003159336" duration="4033000" />
+      <workItem from="1647076103009" duration="3776000" />
+      <workItem from="1647158505992" duration="1200000" />
+      <workItem from="1647245864585" duration="18135000" />
+      <workItem from="1647276318994" duration="1559000" />
+      <workItem from="1647317752968" duration="19363000" />
+      <workItem from="1647406981530" duration="3703000" />
+      <workItem from="1647425172144" duration="12855000" />
+      <workItem from="1647452215048" duration="328000" />
+      <workItem from="1647452547491" duration="171000" />
+      <workItem from="1647452721739" duration="1463000" />
+      <workItem from="1647488657332" duration="10086000" />
+      <workItem from="1647502241236" duration="95000" />
+      <workItem from="1647502349273" duration="90000" />
+      <workItem from="1647502461794" duration="461000" />
+      <workItem from="1647502952323" duration="3818000" />
+      <workItem from="1647508422499" duration="10125000" />
+      <workItem from="1647536985439" duration="970000" />
+      <workItem from="1647582468530" duration="12890000" />
+      <workItem from="1647675831118" duration="27823000" />
+      <workItem from="1647757346753" duration="13471000" />
+      <workItem from="1647835459073" duration="23130000" />
+      <workItem from="1647886207368" duration="3035000" />
+      <workItem from="1647926077026" duration="29070000" />
+      <workItem from="1648012307508" duration="30119000" />
+      <workItem from="1648100719544" duration="6782000" />
+      <workItem from="1648114659518" duration="747000" />
+      <workItem from="1648221154542" duration="2079000" />
+      <workItem from="1648279303784" duration="16789000" />
+      <workItem from="1648361302265" duration="19501000" />
+      <workItem from="1648399503782" duration="659000" />
+      <workItem from="1648437901078" duration="27947000" />
+      <workItem from="1648530544751" duration="17912000" />
+      <workItem from="1648584306588" duration="10599000" />
+      <workItem from="1648627155284" duration="16167000" />
+      <workItem from="1648703107061" duration="11146000" />
+      <workItem from="1648787856419" duration="6506000" />
+      <workItem from="1648876454591" duration="16141000" />
+      <workItem from="1648913247304" duration="3374000" />
+      <workItem from="1648968532567" duration="14971000" />
+      <workItem from="1649051160077" duration="22972000" />
+      <workItem from="1649113134313" duration="11408000" />
+      <workItem from="1649152648687" duration="18363000" />
+      <workItem from="1649210806790" duration="22085000" />
+      <workItem from="1649269212655" duration="170000" />
+      <workItem from="1649317666019" duration="33758000" />
+      <workItem from="1649398022566" duration="42073000" />
+      <workItem from="1649488343191" duration="1089000" />
+      <workItem from="1649577175477" duration="1458000" />
+      <workItem from="1649654483830" duration="4641000" />
+      <workItem from="1649682186129" duration="8211000" />
+      <workItem from="1649782581284" duration="309000" />
+      <workItem from="1649836533657" duration="3070000" />
+      <workItem from="1650014754256" duration="4349000" />
+      <workItem from="1650122143658" duration="4613000" />
+      <workItem from="1650183505319" duration="22226000" />
+      <workItem from="1650220755208" duration="456000" />
+      <workItem from="1650221331731" duration="189000" />
+      <workItem from="1650221754881" duration="5825000" />
+      <workItem from="1650266757452" duration="26959000" />
+      <workItem from="1650356836744" duration="5975000" />
+      <workItem from="1650515393690" duration="1252000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="332" y="62" key="#Custom_Plugin_Repositories" timestamp="1647872059544">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="332" y="62" key="#Custom_Plugin_Repositories/0.0.1536.824@0.0.1536.824" timestamp="1647872059544" />
+    <state x="223" y="68" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650358177028">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" width="1164" height="688" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1650358177028" />
+    <state x="958" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1650215915521">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="958" y="97" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1650215915521" />
+    <state x="573" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1647451618374">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="573" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1647451618374" />
+    <state x="554" y="271" width="428" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1647498149037">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="554" y="271" width="428" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1647498149037" />
+    <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1649257337244">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1649257337244" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1649329192885">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1649329192885" />
+    <state x="361" y="71" key="#项目结构" timestamp="1647449482384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#项目结构/0.0.1536.824@0.0.1536.824" timestamp="1647449482384" />
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1650204660834">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1650204660834" />
+    <state width="1493" height="333" key="GridCell.Tab.0.bottom" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1493" height="333" key="GridCell.Tab.0.center" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1493" height="333" key="GridCell.Tab.0.left" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1493" height="333" key="GridCell.Tab.0.right" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1493" height="333" key="GridCell.Tab.1.bottom" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1493" height="333" key="GridCell.Tab.1.center" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1493" height="333" key="GridCell.Tab.1.left" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1493" height="333" key="GridCell.Tab.1.right" timestamp="1650400706121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="333" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1650400706121" />
+    <state width="1342" height="276" key="GridCell.Tab.2.bottom" timestamp="1650267343618">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="276" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650267343618" />
+    <state width="1342" height="276" key="GridCell.Tab.2.center" timestamp="1650267343618">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="276" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1650267343618" />
+    <state width="1342" height="276" key="GridCell.Tab.2.left" timestamp="1650267343618">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="276" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1650267343618" />
+    <state width="1342" height="276" key="GridCell.Tab.2.right" timestamp="1650267343618">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="276" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1650267343618" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1649257394989">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1649257394989" />
+    <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1647449715619">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="68" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1647449715619" />
+    <state x="414" y="116" key="NewModule_or_Project.wizard" timestamp="1649682963861">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="414" y="116" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1649682963861" />
+    <state x="349" y="75" key="Registry" timestamp="1647676573818">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="75" key="Registry/0.0.1536.824@0.0.1536.824" timestamp="1647676573818" />
+    <state x="240" y="0" key="SettingsEditor" timestamp="1650374501161">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="240" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1650374501161" />
+    <state x="776" y="202" width="632" height="534" key="find.popup" timestamp="1650216378181">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="776" y="202" width="632" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1650216378181" />
+    <state x="178" y="107" width="1179" height="609" key="new project wizard" timestamp="1649352673868">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="107" width="1179" height="609" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1649352673868" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1647500756307">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1647500756307" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1650209073741">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1650209073741" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((WebDelegatingSubject)subject).servletResponse" custom="org.apache.shiro.web.subject.support.WebDelegatingSubject" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nicechat.dao.CommentDao">
+
+<!--    <cache eviction="LRU" flushInterval="100000" size="1024"/>-->
+
+    <insert id="addComment" parameterType="com.nicechat.pojo.Comment">
+        insert into comment(id, content, create_time) values (#{commentId}, #{comment}, #{sendTime})
+    </insert>
+
+    <insert id="addDynamicComment" parameterType="java.lang.String">
+        insert into dynamic_comment(dynamic_id, comment_id) values (#{dynamicId}, #{commentId})
+    </insert>
+
+    <insert id="addUserComment" parameterType="java.lang.String">
+        insert into user_comment(user_id, comment_id) values (#{userId}, #{commentId})
+    </insert>
+
+    <select id="getCommentList" parameterType="java.lang.String" resultType="com.nicechat.pojo.Comment">
+        select
+            c.id as commentId,
+            u.id as userId,
+            u.avatar_url as avatarUrl,
+            u.username as userName,
+            c.content as comment,
+            c.create_time as sendTime,
+            un.schoolName
+        from
+            dynamic_comment dc,
+            comment c,
+            user_comment uc,
+            user u,
+            user_university uu,
+            university un
+        where
+            dc.comment_id = c.id
+            and uc.comment_id = c.id
+            and uc.user_id = u.id
+            and u.id = uu.user_id
+            and uu.university_code = un.code
+            and dc.dynamic_id = #{dynamicId}
+        order by
+            c.create_time asc
+    </select>
+
+</mapper>

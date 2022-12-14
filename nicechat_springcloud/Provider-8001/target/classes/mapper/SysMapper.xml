@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nicechat.dao.SystemDao">
+
+    <insert id="addUser" parameterType="com.nicechat.pojo.User">
+        insert into user(id, account_num, password, username, sex, emotion, birthday, introduction, create_date)
+        values (#{id}, #{accountNum}, #{password}, #{userName}, #{sex}, #{emotion}, #{birthday}, #{introduction}, #{createDate})
+    </insert>
+
+    <insert id="addUserUniversity" parameterType="String">
+        insert into user_university(user_id, university_code)
+        values (#{userId}, #{universityCode})
+    </insert>
+
+    <select id="getUserInfoByAccountNum" parameterType="String" resultType="com.nicechat.pojo.User">
+        select
+            u1.id as id,
+            u1.account_num as accountNum,
+            u1.username as userName,
+            u1.avatar_url as avatarUrl,
+            u1.sex as sex,
+            u1.emotion as emotion,
+            u1.birthday as birthday,
+            u1.introduction as introduction,
+            u1.create_date as createDate,
+            u2.university_code as schoolCode,
+            u3.schoolName
+        from
+            user u1, user_university u2, university u3
+        where
+            u1.id = u2.user_id and u2.university_code = u3.code
+            and u1.account_num = #{accountNum}
+    </select>
+
+    <select id="getUserByUserNameOrAccountNum" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select
+            count(*)
+        from
+            user
+        where
+            <if test="userName != '' and userName != null">
+                username = #{userName}
+            </if>
+            <if test="accountNum != '' and accountNum != null">
+                account_num = #{accountNum}
+            </if>
+    </select>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Eureka-7001" />
+        <module name="ChatSystem-6001" />
+        <module name="Api" />
+        <module name="Consumer-9001" />
+        <module name="Consumer-9002" />
+        <module name="ChatSystem" />
+        <module name="Provider-8002" />
+        <module name="Provider-8001" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ChatSystem" target="1.8" />
+      <module name="Zuul-5001" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
