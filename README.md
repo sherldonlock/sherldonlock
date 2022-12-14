@@ -12,6 +12,9 @@
 - 数据库：MySQL，Redis
 - 全双工通讯协议：Websocket
 
+#### 国内链接
+- https://gitee.com/sherldonlock/campus-social-platform
+
 #### 效果图
 ![发布动态](https://foruda.gitee.com/images/1667731188799844372/8aa209eb_8481189.png "微信图片_20221106183900.png")
 ![查看话题](https://foruda.gitee.com/images/1667731230515894674/aac4a3e4_8481189.png "微信图片_20221106183907.png")
