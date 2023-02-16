@@ -16,5 +16,10 @@
 - https://gitee.com/sherldonlock/campus-social-platform
 
 #### 效果图
-
+![发布动态](https://foruda.gitee.com/images/1667731188799844372/8aa209eb_8481189.png "微信图片_20221106183900.png")
+![查看话题](https://foruda.gitee.com/images/1667731230515894674/aac4a3e4_8481189.png "微信图片_20221106183907.png")
+![他人信息](https://foruda.gitee.com/images/1667731287456407481/a6c93a39_8481189.png "微信图片_20221106183911.png")
+![图片查看](https://foruda.gitee.com/images/1667731337075099175/df75a6ae_8481189.png "微信图片_20221106183913.png")
+![个人信息](https://foruda.gitee.com/images/1667731370282182341/fe8191c6_8481189.png "微信图片_20221106183916.png")
+![在线聊天](https://foruda.gitee.com/images/1667731446255891230/b34cd2ec_8481189.png "微信图片_20221106183919.png")
 
